@@ -22,15 +22,6 @@ class PostForm(forms.ModelForm):
 
         return new_slug
 
-#    def save(self):
-#        new_post = Post.objects.create(
-#            title=self.cleaned_data['title'],
-#            slug=self.cleaned_data['slug'],
-#            body=self.cleaned_data['body'],
-#            tags=self.cleaned_data['tags']
-#        )
-#        return new_post
-
 class TagForm(forms.ModelForm):
     class Meta:
         model = Tag
