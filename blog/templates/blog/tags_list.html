@@ -9,4 +9,8 @@
   {% for tag in tags %}
     <h2><a href="{{ tag.get_absolute_url }}"">{{ tag.title }}</a></h2>
   {% endfor %}
+  <form class="mt-5" action="{% url 'tag_create_url' %}" method="post">
+    {% csrf_token %}
+    <button type="submit" name="button"  class="btn btn-primary">Create tag</button>
+  </form>
 {% endblock %}
