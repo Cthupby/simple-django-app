@@ -1,12 +1,19 @@
 from django.shortcuts import render
 from django.views.generic import View
+from django.db.models import Q
 from .utils import *
 from .models import Post, Tag
 from .forms import TagForm, PostForm
 
 # Create your views here.
 def posts_list(request):
-    posts = Post.objects.all()
+    search_query = request.GET.get('search', '')
+
+    if search_query:
+        posts = Post.objects.filter(Q(title__icontains=search_query) | Q(body__icontains=search_query))
+    else:
+        posts = Post.objects.all()
+
     return render(request, 'blog/index.html', context={'posts': posts})
 
 class PostCreate(ObjectCreateMixin, View):
