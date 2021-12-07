@@ -16,10 +16,10 @@
     {% endblock %}
   </title>
  </head>
- <body>
+ <body class="bg-light">
    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="#">Django-app</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -31,6 +31,17 @@
           <li class="nav-item">
             <a class="nav-link active" href="{% url 'tags_list_url' %}">Tags</a>
           </li>
+          {% if request.user.is_staff %}
+            <div class="btn-group bg-dark">
+              <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Create
+              </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'post_create_url' %}">Post</a>
+                <a class="dropdown-item" href="{% url 'tag_create_url' %}">Tag</a>
+              </div>
+            </div>
+          {% endif %}
         </ul>
         <form class="d-flex" action="{% url 'posts_list_url' %}">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
@@ -75,9 +86,11 @@
       </div>
     </div>
   </div>
-  <div class="admin-panel">
-    <a href="/admin">Admin</a>
-    {% block admin-panel %}{% endblock %}
-  </div>
+  {% if request.user.is_staff %}
+    <div class="admin-panel">
+      <a href="/admin">Admin</a>
+      {% block admin-panel %}{% endblock %}
+    </div>
+  {% endif %}
  </body>
 </html>
