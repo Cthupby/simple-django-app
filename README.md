@@ -1,6 +1,6 @@
 # Simple django app
 
-Simple Django application
+Simple Django application made with [Django](https://docs.djangoproject.com/en/3.2/) and [Django REST framework](https://www.django-rest-framework.org/)
 
 ## Installation
 1. Download the simple-django-app
