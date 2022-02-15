@@ -4,10 +4,12 @@ Simple Django application made with [Django](https://docs.djangoproject.com/en/3
 
 ## Installation
 1. Download the simple-django-app
-2. Create a new virtual environment  
-   ```python -m venv ./venv```
+2. Create and activate virtual environment  
+   ```python -m virualenv venv```  
+   ```source ./venv/bin/activate```
 3. Install the required libraries  
   ```pip install -r requirements.txt```
+5. Enter your token from Botfather to config 
 
 ## Usage 
 For using simple-django-app enter  
