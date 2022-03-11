@@ -9,7 +9,6 @@ Simple Django application made with [Django](https://docs.djangoproject.com/en/3
    ```source ./venv/bin/activate```
 3. Install the required libraries  
   ```pip install -r requirements.txt```
-5. Enter your token from Botfather to config 
 
 ## Usage 
 For using simple-django-app enter  
