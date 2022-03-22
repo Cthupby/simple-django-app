@@ -12,11 +12,11 @@ Simple Django application made with [Django](https://docs.djangoproject.com/en/3
 
 ## Usage 
 For using simple-django-app enter  
-```gunicorn simpleapp.wsgi```  or  ```python manage.py runserver```  
+```gunicorn simpleapp.wsgi```  or  ```python manage.py runserver 8000```  
 
 ## The CRUD application made with Django:  
   
-```blog/~```  
+```https://localhost:8000/blog/~```  
   
 **CRUD** means performing Create, Retrieve, Update and Delete operations on a table in a database.  
 
@@ -28,7 +28,7 @@ For using simple-django-app enter
 
 ## The REST application made with Django Rest Framework:  
   
-```drf_blog/api/~```  
+```https://localhost:8000/drf_blog/api/~```  
 
 **REST** is a protocol for creating, listing, changing and deleting data on your server over HTTP.  
 The **Django REST framework (DRF)** is a toolkit built on top of the Django web framework that reduces the amount of code you need to write to create **REST** interfaces.  

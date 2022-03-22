@@ -6,3 +6,4 @@ from drf_blog import views
 urlpatterns = [
     path('api/posts', views.PostList.as_view())
 ]
+
