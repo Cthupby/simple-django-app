@@ -1,1 +1,1 @@
-web: gunicorn stepik_jobs.wsgi
+web: gunicorn simpleapp.wsgi
