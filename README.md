@@ -16,9 +16,9 @@ For using simple-django-app enter
 
 > The CRUD application made with Django:  
 
-```blog/```  
+> ```blog/```  
   
-The REST application made with Django Rest Framework:  
+> The REST application made with Django Rest Framework:  
 
-```drf_blog/api/```  
+> ```drf_blog/api/```  
 
