@@ -18,9 +18,11 @@ For using simple-django-app enter
   
 ```blog/~```  
   
-CRUD means performing Create, Retrieve, Update and Delete operations on a table in a database.  
+**CRUD** means performing Create, Retrieve, Update and Delete operations on a table in a database.  
+
+
 **Create** – create or add new posts in a table in the database.  
-**Retrieve** – read, retrieve, search, or view existing posts as a list(List View) or retrieve a particular post in detail (Detail View)  
+**Retrieve** – read, retrieve, search or view posts as a list(List View) or retrieve a post in detail (Detail View)  
 **Update** – update or edit existing posts in a table in the database  
 **Delete** – delete, deactivate, or remove existing posts in a table in the database  
 
@@ -28,5 +30,5 @@ CRUD means performing Create, Retrieve, Update and Delete operations on a table 
   
 ```drf_blog/api/~```  
 
-REST is a protocol for creating, listing, changing and deleting data on your server over HTTP.  
-The Django REST framework (DRF) is a toolkit built on top of the Django web framework that reduces the amount of code you need to write to create REST interfaces.  
+**REST** is a protocol for creating, listing, changing and deleting data on your server over HTTP.  
+The **Django REST framework (DRF)** is a toolkit built on top of the Django web framework that reduces the amount of code you need to write to create **REST** interfaces.  
