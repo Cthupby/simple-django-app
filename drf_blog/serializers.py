@@ -11,3 +11,7 @@ class PostSerializer(serializers.ModelSerializer):
         model = Post
         fields = ['title', 'url', 'poster', 'poster_id', 'create']
 
+class VoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Vote
+        fields = ['id']

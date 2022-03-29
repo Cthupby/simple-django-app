@@ -4,6 +4,7 @@ from drf_blog import views
 
 
 urlpatterns = [
-    path('api/posts', views.PostList.as_view())
+    path('api/posts', views.PostList.as_view()),
+    path('api/posts/<1nt:pk>/vote', views.VoteCreate.as_view())    
 ]
 
