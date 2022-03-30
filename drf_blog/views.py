@@ -15,6 +15,15 @@ class PostList(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         serializer.save(poster=self.request.user)
+
+class PostRetrieveDestroy(generics.RetrieveDestroyAPIView):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+
         
 class VoteCreate(generics.CreateAPIView, mixins.DestroyModelMixin):
     """

@@ -14,7 +14,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     def get_votes(self, post):
         return Vote.objects.filter(post=post).count()
-
+        
 class VoteSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vote
