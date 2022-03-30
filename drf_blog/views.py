@@ -23,7 +23,7 @@ class VoteCreate(generics.CreateAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        user = user.request.user
+        user = self.request.user
         post = Post.objects.get(pk=self.kwargs['pk'])
         return Vote.objects.filter(voter=user, post=post)
         
@@ -31,3 +31,4 @@ class VoteCreate(generics.CreateAPIView):
         if self.get_queryset().exists():
             raise ValidationError('You have already voted for this post.')
         serializer.save(voter=self.request.user, post=Post.objects.get(pk=self.kwargs['pk']))
+        
