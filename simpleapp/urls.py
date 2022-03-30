@@ -23,5 +23,7 @@ urlpatterns = [
     path('', redirect_blog),
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
-    path('drf_blog/', include('drf_blog.urls'))
+    path('drf_blog/', include('drf_blog.urls')),
+    path('spa_blog/', include('spa_blog.urls'))    
 ]
+
