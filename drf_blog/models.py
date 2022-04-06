@@ -7,7 +7,7 @@ class Post(models.Model):
     poster = models.ForeignKey(User, on_delete=models.CASCADE)
     create = models.DateTimeField(auto_now_add=True)
         
-    class Mete:
+    class Meta:
         ordering = ['-created']
         
 class Vote(models.Model):
