@@ -12,6 +12,7 @@ Simple Django application made with [Django](https://docs.djangoproject.com/en/3
 
 ## Usage 
 For using simple-django-app enter  
+```python manage.py migrate```
 ```gunicorn simpleapp.wsgi```  or  ```python manage.py runserver 8000```  
 
 ## The CRUD application made with Django:  
