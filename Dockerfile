@@ -1,7 +1,8 @@
-# Tell Docker use the official python 3 image
-FROM python:3
+# Tell Docker use the official python image
+FROM python:3.9
 
 # Setting an enviroment variable
+ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set the working directory of the container
